@@ -5,8 +5,8 @@ Scoreboard scb_h;
 
 function new(virtual tb_ifc v_io, Scoreboard scb_h);
 
-this.v_io = v_io;
-this.scb_h = scb_h;
+this.v_io =  v_io;
+this.scb_h =  scb_h;
 
 endfunction
 
@@ -31,7 +31,7 @@ endtask
 virtual function void print_results();
 
 $display("Read from register location %2d: opcode = %@d (%5s) operand_a =%3d operand_b =%3d",
-v_io.read_pointer, v_io.instruction_word.opc, v_io.instruction_word.opc.name(), v_io.instruction_word.op_a, v_io.instruction_word.op_b);
+v_io.read_pointer,  v_io.instruction_word.opc, v_io.instruction_word.opc.name(), v_io.instruction_word.op_a, v_io.instruction_word.op_b);
 
 endfunction
 
